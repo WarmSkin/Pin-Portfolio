@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 function ProjectPreview (props) {
   return (
     <div>
@@ -11,9 +13,12 @@ function ProjectPreview (props) {
             alt={props.title}
         />
         <br/>
-        <button>
+        <Link to={`/projects/${props.title}`}>
+          <button>
             Learn more
-        </button>
+          </button>
+        </Link>
+        
       </section>
     </div>
 )
